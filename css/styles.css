@@ -1,0 +1,118 @@
+/* ===== Colors and fonts ===== */
+:root {
+    --brown: #4a2c2a;     /* headings, header */
+    --cream: #fdf8f3;     /* page background */
+    --caramel: #c8742f;   /* buttons, accents */
+    --text: #333333;      /* body text */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+    color: var(--brown);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== Header and nav (phone first: stacked) ===== */
+.site-header {
+    background-color: var(--brown);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.site-header a,
+.site-header span {
+    color: var(--cream);
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* ===== Sections and cards ===== */
+.section {
+    padding: 32px 16px;
+}
+
+.card-grid,
+.product-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.value-card,
+.product-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--caramel);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* ===== Forms ===== */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid var(--brown);
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== Bigger screens ===== */
+@media (min-width: 768px) {
+    .site-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .card-grid,
+    .product-grid {
+        flex-direction: row;
+    }
+
+    .value-card,
+    .product-card {
+        flex: 1;
+    }
+}
+
+.highlight {
+    background-color: #f5e1c8;
+    padding: 6px;
+}
+
+#page-title {
+    text-align: center;
+    border-bottom: 2px solid var(--caramel);
+}
